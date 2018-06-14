@@ -1,4 +1,4 @@
-### Bước 1 - Tạo cluster kubernets ####
+﻿### Bước 1 - Tạo cluster kubernets ####
 - Tạo cluster với tài nguyên:
 	+ 4vCPU
 	+ RAM: 8G
