@@ -19,7 +19,7 @@ parameters:
   type: pd-ssd
 --------------------------
 
-# script tạo VolumClaim với storageclass
+# script tạo VolumClaim MongoDB với storageclass
 ------------------------------
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -31,5 +31,34 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 80Gi
+      storage: 60Gi
+----------------------------
+# script tạo VolumClaim nginx với storageclass
+------------------------------
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis
+spec:
+  storageClassName: faster-ssd
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+----------------------------
+
+# script tạo VolumClaim Apache-PHP với storageclass
+------------------------------
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis
+spec:
+  storageClassName: faster-ssd
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
 ----------------------------
